@@ -122,3 +122,10 @@ def search(request):
         "detail_url_name": "recipes:detail",
     }
     return render(request, "recipes/search.html", context)
+
+def recipe_list(request):
+    recipes = [
+        {"name": "Vegetable Pasta", "image": "recipes/images/pasta.jpg"},
+        {"name": "Masala Chai", "image": "recipes/images/masala_chai.jpg"},
+    ]
+    return render(request, "recipes/recipes_list.html", {"recipes": recipes})
