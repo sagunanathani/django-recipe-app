@@ -123,9 +123,9 @@ def search(request):
     }
     return render(request, "recipes/search.html", context)
 
-def recipe_list(request):
+def overview(request):
     recipes = [
-        {"name": "Vegetable Pasta", "image": "recipes/images/pasta.jpg"},
-        {"name": "Masala Chai", "image": "recipes/images/masala_chai.jpg"},
+        {"title": "Vegetable Pasta", "author_name": "Chef A", "prep_time": 15, "cook_time": 20, "image": "recipes/images/pasta.jpg"},
+        {"title": "Masala Chai", "author_name": "Chef B", "prep_time": 5, "cook_time": 10, "image": "recipes/images/masala_chai.jpg"},
     ]
-    return render(request, "recipes/recipes_list.html", {"recipes": recipes})
+    return render(request, "recipes/overview.html", {"recipes": recipes})
